@@ -26,9 +26,9 @@ const RichardMcSharryClone = () => {
         perspective: 1000
       });
 
-      // Subtle parallax effect for hero background only
+      // Hero parallax effect
       gsap.to(".hero-bg", {
-        yPercent: -8,
+        yPercent: -20,
         ease: "none",
         scrollTrigger: {
           trigger: ".hero-section",
@@ -59,10 +59,10 @@ const RichardMcSharryClone = () => {
         });
       });
 
-      // Very subtle parallax for section backgrounds - contained within bounds
-      gsap.utils.toArray('.parallax-bg:not(.hero-bg)').forEach((bg) => {
+      // Parallax for all section backgrounds
+      gsap.utils.toArray('.parallax-bg').forEach((bg) => {
         gsap.to(bg, {
-          yPercent: -5,
+          yPercent: -15,
           ease: "none",
           scrollTrigger: {
             trigger: bg.closest('.section'),
