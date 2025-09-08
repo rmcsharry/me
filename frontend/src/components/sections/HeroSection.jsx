@@ -58,7 +58,9 @@ const HeroSection = () => {
 
   return (
     <section ref={heroRef} className="hero-section section">
-      <div className="matrix-bg hero-bg"></div>
+      <div className="matrix-bg hero-bg" style={{
+        backgroundImage: 'url(https://richardmcsharry.com/assets/images/mbr-1920x1200.jpg)'
+      }}></div>
       <div className="matrix-overlay"></div>
       <div className="container">
         <div className="hero-content">
