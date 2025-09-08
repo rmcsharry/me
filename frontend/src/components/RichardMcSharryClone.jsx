@@ -26,19 +26,28 @@ const RichardMcSharryClone = () => {
         perspective: 1000
       });
 
-      // Disable parallax background movement to prevent gaps
-      // Hero background stays fixed
-      gsap.set(".hero-bg", { y: 0 });
+      // Subtle parallax effect for hero background only
+      gsap.to(".hero-bg", {
+        yPercent: -8,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-section",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+          invalidateOnRefresh: true
+        }
+      });
 
-      // Section fade in animations only
+      // Section fade in animations
       gsap.utils.toArray('.section').forEach((section, i) => {
         gsap.fromTo(section, {
           opacity: 0,
-          y: 20
+          y: 30
         }, {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: 1.2,
           ease: "power2.out",
           scrollTrigger: {
             trigger: section,
@@ -50,15 +59,35 @@ const RichardMcSharryClone = () => {
         });
       });
 
-      // Keep all backgrounds static to prevent bleeding
-      gsap.set('.parallax-bg', { y: 0 });
+      // Very subtle parallax for section backgrounds - contained within bounds
+      gsap.utils.toArray('.parallax-bg:not(.hero-bg)').forEach((bg) => {
+        gsap.to(bg, {
+          yPercent: -5,
+          ease: "none",
+          scrollTrigger: {
+            trigger: bg.closest('.section'),
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1.5,
+            invalidateOnRefresh: true
+          }
+        });
+      });
+
+      // Floating animation for hero portraits
+      gsap.to(".hero-portrait", {
+        y: -15,
+        duration: 4,
+        repeat: -1,
+        yoyo: true,
+        ease: "power2.inOut",
+        stagger: 0.5
+      });
 
       // Clean up on resize
       ScrollTrigger.addEventListener("refresh", () => {
         gsap.set([".parallax-bg", ".matrix-bg"], { 
-          clearProps: "transform",
-          force3D: true,
-          y: 0
+          force3D: true
         });
       });
 
