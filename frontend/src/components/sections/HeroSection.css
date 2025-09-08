@@ -65,27 +65,25 @@
 
 .hero-portraits {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 60px;
+  flex-direction: column;
+  gap: 40px;
   position: relative;
 }
 
 .hero-portrait {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
+  width: 300px;
+  height: 200px;
+  border-radius: 15px;
   overflow: hidden;
-  border: 3px solid #00ffff;
-  box-shadow: 0 0 40px rgba(0,255,255,0.6);
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 30px rgba(0,255,255,0.4);
   transition: all 0.3s ease;
   position: relative;
 }
 
 .hero-portrait:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 60px rgba(0,255,255,0.8);
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(0,255,255,0.6);
 }
 
 .hero-portrait::before {
@@ -103,20 +101,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.9) contrast(1.3) saturate(1.2);
+  filter: brightness(0.8) contrast(1.2);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
-.portrait-1 {
-  /* Robot woman on the left */
-}
-
 .portrait-2 {
-  /* Robot man on the right - flip horizontally to face left */
-  transform: scaleX(-1);
+  margin-left: 80px;
 }
 
 .scroll-indicator {
