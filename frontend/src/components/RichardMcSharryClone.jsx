@@ -18,15 +18,15 @@ const RichardMcSharryClone = () => {
   useEffect(() => {
     // Initialize parallax animations
     const ctx = gsap.context(() => {
-      // Hero parallax effect
+      // Hero parallax effect - much gentler movement
       gsap.to(".hero-bg", {
-        yPercent: -50,
+        yPercent: -15,
         ease: "none",
         scrollTrigger: {
           trigger: ".hero-section",
           start: "top bottom",
           end: "bottom top",
-          scrub: true
+          scrub: 1
         }
       });
 
@@ -34,7 +34,7 @@ const RichardMcSharryClone = () => {
       gsap.utils.toArray('.section').forEach((section, i) => {
         gsap.fromTo(section, {
           opacity: 0,
-          y: 100
+          y: 50
         }, {
           opacity: 1,
           y: 0,
@@ -48,16 +48,16 @@ const RichardMcSharryClone = () => {
         });
       });
 
-      // Parallax backgrounds for sections
+      // Parallax backgrounds for sections - much gentler movement
       gsap.utils.toArray('.parallax-bg').forEach((bg) => {
         gsap.to(bg, {
-          yPercent: -30,
+          yPercent: -10,
           ease: "none",
           scrollTrigger: {
             trigger: bg.closest('.section'),
             start: "top bottom",
             end: "bottom top",
-            scrub: true
+            scrub: 1
           }
         });
       });
