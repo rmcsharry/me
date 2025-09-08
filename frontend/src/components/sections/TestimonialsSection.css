@@ -1,0 +1,264 @@
+.testimonials-section {
+  background-color: #111;
+  min-height: 100vh;
+}
+
+.testimonials-content {
+  text-align: center;
+}
+
+.testimonials-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #ff6b6b;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-bottom: 5rem;
+}
+
+.testimonial-card {
+  background: rgba(255,107,107,0.1);
+  border: 2px solid rgba(255,107,107,0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  border-color: #ff6b6b;
+  box-shadow: 0 10px 30px rgba(255,107,107,0.2);
+  transform: translateY(-5px);
+}
+
+.testimonial-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.testimonial-content-text h3 {
+  color: #ff6b6b;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.testimonial-content-text p {
+  color: #ccc;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.teaching-highlight {
+  background: linear-gradient(135deg, rgba(50,205,50,0.1) 0%, rgba(0,0,0,0.8) 100%);
+  border: 2px solid #32cd32;
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 4rem 0;
+}
+
+.teaching-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.teaching-text {
+  text-align: left;
+}
+
+.teaching-text h3 {
+  color: #32cd32;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.teaching-text p {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.mentor-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #32cd32, #90ee90);
+  color: #000;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.mentor-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(50,205,50,0.4);
+}
+
+.codementor-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.life-section {
+  margin: 5rem 0;
+}
+
+.life-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.life-image {
+  position: relative;
+}
+
+.life-image img {
+  width: 100%;
+  border-radius: 15px;
+  border: 2px solid #ffd700;
+}
+
+.image-caption {
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.life-text {
+  text-align: left;
+}
+
+.life-text h3 {
+  color: #ffd700;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.activities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.activity-item {
+  background: rgba(255,215,0,0.1);
+  border: 1px solid rgba(255,215,0,0.3);
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  color: #ffd700;
+  transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+  background: rgba(255,215,0,0.2);
+  border-color: #ffd700;
+}
+
+.final-note {
+  font-size: 1.1rem;
+  color: #ddd;
+  font-style: italic;
+}
+
+.remote-work {
+  background: rgba(0,191,255,0.1);
+  border: 2px solid rgba(0,191,255,0.3);
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 4rem 0;
+}
+
+.remote-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.upwork-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.remote-text {
+  text-align: left;
+}
+
+.remote-text h3 {
+  color: #00bfff;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.remote-text p {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.hire-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #00bfff, #87ceeb);
+  color: #000;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.hire-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,191,255,0.4);
+}
+
+@media (max-width: 768px) {
+  .testimonial-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .teaching-content,
+  .life-content,
+  .remote-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .teaching-text,
+  .life-text,
+  .remote-text {
+    text-align: center;
+  }
+  
+  .testimonials-content h2 {
+    font-size: 2rem;
+  }
+}
