@@ -26,20 +26,11 @@ const RichardMcSharryClone = () => {
         perspective: 1000
       });
 
-      // Very subtle parallax effect for hero background
-      gsap.to(".hero-bg", {
-        y: "-3%",
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".hero-section",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 3,
-          invalidateOnRefresh: true
-        }
-      });
+      // Disable parallax background movement to prevent gaps
+      // Hero background stays fixed
+      gsap.set(".hero-bg", { y: 0 });
 
-      // Section fade in animations
+      // Section fade in animations only
       gsap.utils.toArray('.section').forEach((section, i) => {
         gsap.fromTo(section, {
           opacity: 0,
@@ -59,26 +50,15 @@ const RichardMcSharryClone = () => {
         });
       });
 
-      // Minimal parallax for section backgrounds
-      gsap.utils.toArray('.parallax-bg').forEach((bg) => {
-        gsap.to(bg, {
-          y: "-2%",
-          ease: "none",
-          scrollTrigger: {
-            trigger: bg.closest('.section'),
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 3,
-            invalidateOnRefresh: true
-          }
-        });
-      });
+      // Keep all backgrounds static to prevent bleeding
+      gsap.set('.parallax-bg', { y: 0 });
 
-      // Clean up on resize to prevent artifacts
+      // Clean up on resize
       ScrollTrigger.addEventListener("refresh", () => {
         gsap.set([".parallax-bg", ".matrix-bg"], { 
           clearProps: "transform",
-          force3D: true 
+          force3D: true,
+          y: 0
         });
       });
 
