@@ -6,12 +6,22 @@
   box-sizing: border-box;
 }
 
+/* Improve image rendering globally */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
 .richard-mcsharry-clone {
   background-color: #000;
   color: #fff;
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .section {
