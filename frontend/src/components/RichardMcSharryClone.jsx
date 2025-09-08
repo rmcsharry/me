@@ -18,15 +18,22 @@ const RichardMcSharryClone = () => {
   useEffect(() => {
     // Initialize parallax animations
     const ctx = gsap.context(() => {
-      // Hero parallax effect - much gentler movement
+      // Disable conflicting transforms on initialization
+      gsap.set([".parallax-bg", ".matrix-bg"], { 
+        force3D: true,
+        transformOrigin: "center center"
+      });
+
+      // Very subtle parallax effect for hero background
       gsap.to(".hero-bg", {
-        yPercent: -15,
+        y: "-5%",
         ease: "none",
         scrollTrigger: {
           trigger: ".hero-section",
           start: "top bottom",
           end: "bottom top",
-          scrub: 1
+          scrub: 2,
+          invalidateOnRefresh: true
         }
       });
 
@@ -34,32 +41,40 @@ const RichardMcSharryClone = () => {
       gsap.utils.toArray('.section').forEach((section, i) => {
         gsap.fromTo(section, {
           opacity: 0,
-          y: 50
+          y: 30
         }, {
           opacity: 1,
           y: 0,
           duration: 1,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: section,
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "play none none reverse"
+            start: "top 85%",
+            end: "bottom 15%",
+            toggleActions: "play none none reverse",
+            invalidateOnRefresh: true
           }
         });
       });
 
-      // Parallax backgrounds for sections - much gentler movement
+      // Very subtle parallax for section backgrounds
       gsap.utils.toArray('.parallax-bg').forEach((bg) => {
         gsap.to(bg, {
-          yPercent: -10,
+          y: "-3%",
           ease: "none",
           scrollTrigger: {
             trigger: bg.closest('.section'),
             start: "top bottom",
             end: "bottom top",
-            scrub: 1
+            scrub: 2,
+            invalidateOnRefresh: true
           }
         });
+      });
+
+      // Refresh ScrollTrigger on resize
+      ScrollTrigger.addEventListener("refresh", () => {
+        gsap.set([".parallax-bg", ".matrix-bg"], { clearProps: "transform" });
       });
 
     }, mainRef);
