@@ -60,14 +60,15 @@
 }
 
 .skill-icon {
-  font-size: 3rem;
   margin-bottom: 1rem;
-  filter: grayscale(1) brightness(0.8);
-  transition: filter 0.3s ease;
+  color: #00ffff;
+  transition: color 0.3s ease;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .skill-card:hover .skill-icon {
-  filter: none;
+  color: #00ff88;
 }
 
 .skill-card h3 {
