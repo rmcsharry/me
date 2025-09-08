@@ -47,13 +47,18 @@ const SkillsSection = () => {
           <h2>A FEW OF MY SKILLS...</h2>
           <p className="skills-subtitle">I'm a code monkey experienced at leading other code monkeys ;)</p>
           <div className="skills-grid">
-            {skills.map((skill, index) => (
-              <div key={index} className="skill-card">
-                <div className="skill-icon">{skill.icon}</div>
-                <h3>{skill.title}</h3>
-                <p>{skill.description}</p>
-              </div>
-            ))}
+            {skills.map((skill, index) => {
+              const IconComponent = skill.icon;
+              return (
+                <div key={index} className="skill-card">
+                  <div className="skill-icon">
+                    <IconComponent size={48} />
+                  </div>
+                  <h3>{skill.title}</h3>
+                  <p>{skill.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
