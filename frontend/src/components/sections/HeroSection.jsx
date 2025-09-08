@@ -77,10 +77,10 @@ const HeroSection = () => {
           </div>
           <div className="hero-portraits">
             <div className="hero-portrait portrait-1">
-              <img src="https://images.unsplash.com/photo-1566803739329-908e2b57fc39?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxmdXR1cmlzdGljJTIwdGVjaHxlbnwwfHx8fDE3NTczNDgyMDZ8MA&ixlib=rb-4.1.0&q=85" alt="Futuristic Tech" />
+              <img src="https://images.unsplash.com/photo-1706606999710-72658165a73d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMHdvbWFuJTIwZmFjZXxlbnwwfHx8fDE3NTczNTE4NTl8MA&ixlib=rb-4.1.0&q=85" alt="Robot Woman" />
             </div>
             <div className="hero-portrait portrait-2">
-              <img src="https://images.pexels.com/photos/33798614/pexels-photo-33798614.jpeg" alt="Circuit Board" />
+              <img src="https://images.unsplash.com/photo-1650171457588-dc7baef3ed22?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxZnxmdXR1cmlzdGljJTIwcm9ib3QlMjBtYW58ZW58MHx8fHwxNzU3MzUxODY1fDA&ixlib=rb-4.1.0&q=85" alt="Futuristic Robot Man" />
             </div>
           </div>
         </div>
