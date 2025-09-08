@@ -18,21 +18,23 @@ const RichardMcSharryClone = () => {
   useEffect(() => {
     // Initialize parallax animations
     const ctx = gsap.context(() => {
-      // Disable conflicting transforms on initialization
+      // Set better rendering properties for smoother animation
       gsap.set([".parallax-bg", ".matrix-bg"], { 
         force3D: true,
-        transformOrigin: "center center"
+        transformOrigin: "center center",
+        backfaceVisibility: "hidden",
+        perspective: 1000
       });
 
       // Very subtle parallax effect for hero background
       gsap.to(".hero-bg", {
-        y: "-5%",
+        y: "-3%",
         ease: "none",
         scrollTrigger: {
           trigger: ".hero-section",
           start: "top bottom",
           end: "bottom top",
-          scrub: 2,
+          scrub: 3,
           invalidateOnRefresh: true
         }
       });
@@ -41,7 +43,7 @@ const RichardMcSharryClone = () => {
       gsap.utils.toArray('.section').forEach((section, i) => {
         gsap.fromTo(section, {
           opacity: 0,
-          y: 30
+          y: 20
         }, {
           opacity: 1,
           y: 0,
@@ -57,24 +59,27 @@ const RichardMcSharryClone = () => {
         });
       });
 
-      // Very subtle parallax for section backgrounds
+      // Minimal parallax for section backgrounds
       gsap.utils.toArray('.parallax-bg').forEach((bg) => {
         gsap.to(bg, {
-          y: "-3%",
+          y: "-2%",
           ease: "none",
           scrollTrigger: {
             trigger: bg.closest('.section'),
             start: "top bottom",
             end: "bottom top",
-            scrub: 2,
+            scrub: 3,
             invalidateOnRefresh: true
           }
         });
       });
 
-      // Refresh ScrollTrigger on resize
+      // Clean up on resize to prevent artifacts
       ScrollTrigger.addEventListener("refresh", () => {
-        gsap.set([".parallax-bg", ".matrix-bg"], { clearProps: "transform" });
+        gsap.set([".parallax-bg", ".matrix-bg"], { 
+          clearProps: "transform",
+          force3D: true 
+        });
       });
 
     }, mainRef);
