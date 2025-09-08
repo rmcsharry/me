@@ -5,7 +5,7 @@ const AboutSection = () => {
   return (
     <section className="about-section section">
       <div className="parallax-bg" style={{
-        backgroundImage: 'url(https://images.unsplash.com/photo-1732384001962-c40cf507aef3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxzdG9ybXRyb29wZXIlMjBoZWxtZXR8ZW58MHx8fHwxNzU3MzUxODcwfDA&ixlib=rb-4.1.0&q=85)'
+        backgroundImage: 'url(https://richardmcsharry.com/assets/images/stormtroopers-474x286.png)'
       }}></div>
       <div className="matrix-overlay"></div>
       <div className="container">
