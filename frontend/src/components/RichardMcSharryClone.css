@@ -110,10 +110,10 @@ img {
 
 .matrix-overlay {
   position: absolute;
-  top: 0;
+  top: -5px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 10px);
   background: linear-gradient(45deg, rgba(0,0,0,0.9) 0%, rgba(0,20,20,0.95) 100%);
   z-index: -2;
 }
