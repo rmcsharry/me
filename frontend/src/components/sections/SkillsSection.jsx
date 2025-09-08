@@ -1,4 +1,5 @@
 import React from 'react';
+import { Crown, Building2, FileType, Gem, RotateCcw, Cloud } from 'lucide-react';
 import './SkillsSection.css';
 
 const SkillsSection = () => {
