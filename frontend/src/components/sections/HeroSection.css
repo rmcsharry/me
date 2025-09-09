@@ -167,3 +167,114 @@
     margin-left: 0;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-subtitle p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-quote {
+    padding: 1rem 0;
+    padding-left: 1rem;
+  }
+  
+  .quote-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+  
+  .quote-author {
+    font-size: 0.9rem;
+  }
+  
+  .hero-portraits {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .hero-portrait {
+    width: 150px;
+    height: 100px;
+  }
+  
+  .portrait-2 {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-section {
+    padding: 40px 15px;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    padding: 0 5px;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin-bottom: 0.8rem;
+    word-break: break-word;
+  }
+  
+  .hero-subtitle h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .hero-subtitle p {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero-quote {
+    padding: 0.8rem 0;
+    padding-left: 0.8rem;
+    margin: 0.5rem 0;
+  }
+  
+  .quote-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+  
+  .quote-author {
+    font-size: 0.8rem;
+  }
+  
+  .hero-portraits {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .hero-portrait {
+    width: 120px;
+    height: 80px;
+    border-width: 1px;
+  }
+}
